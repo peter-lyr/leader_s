@@ -6,26 +6,26 @@ require 'which-key'.register {
 
 require 'which-key'.register {
   ['<leader>s'] = { name = 'telescope', },
-  ['<leader>s<localleader>'] = { name = 'telescope.more', },
+  ['<leader>s<leader>'] = { name = 'telescope.more', },
 
   ['<leader>sh'] = { '<cmd>Telescope help_tags<cr>', 'help_tags', mode = { 'n', 'v', }, },
   ['<leader>sa'] = { '<cmd>Telescope builtin<cr>', 'builtin', mode = { 'n', 'v', }, },
 
   ['<leader>sw'] = { '<cmd>Telescope file_browser<cr>', 'file_browser', mode = { 'n', 'v', }, },
-  ['<leader>s<leader>'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'fd') end, 'fd_sel', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>w'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'fd') end, 'fd_sel', mode = { 'n', 'v', }, },
 
   ['<leader>sl'] = { '<cmd>Telescope live_grep<cr>', 'live_grep', mode = { 'n', 'v', }, },
-  ['<leader>s<localleader>l'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'live_grep') end, 'live_grep_sel', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>l'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'live_grep') end, 'live_grep_sel', mode = { 'n', 'v', }, },
 
   ['<leader>ss'] = { '<cmd>Telescope grep_string<cr>', 'grep_string', mode = { 'n', 'v', }, },
-  ['<leader>s<localleader>s'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'grep_string') end, 'grep_string_sel', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>s'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'grep_string') end, 'grep_string_sel', mode = { 'n', 'v', }, },
 
   ['<leader>sg'] = { name = 'telescope.git', },
   ['<leader>sgc'] = { '<cmd>Telescope git_commits<cr>', 'git_commits', mode = { 'n', 'v', }, },
-  ['<leader>sg<localleader>c'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_commits') end, 'git_commits_sel', mode = { 'n', 'v', }, },
+  ['<leader>sg<leader>c'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_commits') end, 'git_commits_sel', mode = { 'n', 'v', }, },
 
   ['<leader>sgs'] = { '<cmd>Telescope git_status<cr>', 'git_status', mode = { 'n', 'v', }, },
-  ['<leader>sg<localleader>s'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_status') end, 'git_status_sel', mode = { 'n', 'v', }, },
+  ['<leader>sg<leader>s'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_status') end, 'git_status_sel', mode = { 'n', 'v', }, },
 
   ['<leader>sb'] = { '<cmd>Telescope buffers<cr>', 'buffers', mode = { 'n', 'v', }, },
   ['<leader>sp'] = { '<cmd>Telescope project<cr>', 'project', mode = { 'n', 'v', }, },
