@@ -18,7 +18,9 @@ require 'which-key'.register {
   ['<leader>ss'] = { '<cmd>Telescope grep_string<cr>', 'grep_string', mode = { 'n', 'v', }, },
   ['<leader>s<localleader>s'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'grep_string') end, 'grep_string_sel', mode = { 'n', 'v', }, },
 
-  ["<leader>s'"] = { '<cmd>Telescope grep_string<cr>', 'grep_string', mode = { 'n', 'v', }, },
+  ['<leader>sc'] = { '<cmd>Telescope git_commits<cr>', 'git_commits', mode = { 'n', 'v', }, },
+  ['<leader>s<localleader>c'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_commits') end, 'grep_string_sel', mode = { 'n', 'v', }, },
+
   ['<leader>sb'] = { '<cmd>Telescope buffers<cr>', 'buffers', mode = { 'n', 'v', }, },
   ['<leader>sp'] = { '<cmd>Telescope project<cr>', 'project', mode = { 'n', 'v', }, },
 }
