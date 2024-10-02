@@ -8,6 +8,8 @@ require 'which-key'.register {
   ['<leader>s'] = { name = 'telescope', },
   ['<leader>s<leader>'] = { name = 'telescope.more', },
 
+  ['<leader>sr'] = { function() F.source(StdConfig .. 'lua\\_telescope.lua') end, 'resource telescope', mode = { 'n', 'v', }, },
+
   ['<leader>sh'] = { '<cmd>Telescope help_tags<cr>', 'help_tags', mode = { 'n', 'v', }, },
   ['<leader>sa'] = { '<cmd>Telescope builtin<cr>', 'builtin', mode = { 'n', 'v', }, },
 
