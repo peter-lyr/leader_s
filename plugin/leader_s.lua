@@ -10,6 +10,8 @@ require 'which-key'.register {
 
   ['<leader>sr'] = { function() F.source(StdConfig .. 'lua\\_telescope.lua') end, 'resource telescope', mode = { 'n', 'v', }, },
 
+  ['<leader>sz'] = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'current_buffer_fuzzy_find', mode = { 'n', 'v', }, },
+
   ['<leader>sh'] = { '<cmd>Telescope help_tags<cr>', 'help_tags', mode = { 'n', 'v', }, },
   ['<leader>sa'] = { '<cmd>Telescope builtin<cr>', 'builtin', mode = { 'n', 'v', }, },
 
