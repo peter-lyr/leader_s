@@ -32,6 +32,9 @@ require 'which-key'.register {
   ['<leader>sgs'] = { '<cmd>Telescope git_status<cr>', 'git_status', mode = { 'n', 'v', }, },
   ['<leader>sg<leader>s'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_status') end, 'git_status_sel', mode = { 'n', 'v', }, },
 
+  ['<leader>sgh'] = { '<cmd>Telescope git_branches<cr>', 'git_branches', mode = { 'n', 'v', }, },
+  ['<leader>sg<leader>h'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_branches') end, 'git_branches_sel', mode = { 'n', 'v', }, },
+
   ['<leader>sb'] = { '<cmd>Telescope buffers<cr>', 'buffers', mode = { 'n', 'v', }, },
   ['<leader>sp'] = { '<cmd>Telescope project<cr>', 'project', mode = { 'n', 'v', }, },
 }
