@@ -15,6 +15,7 @@ require 'which-key'.register {
 
   ['<leader>sw'] = { '<cmd>Telescope file_browser<cr>', 'file_browser', mode = { 'n', 'v', }, },
   ['<leader>s<leader>w'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'fd') end, 'fd_sel', mode = { 'n', 'v', }, },
+  ['<leader>sj'] = { function() F.opened_proj_sel() end, 'opened_proj_sel', mode = { 'n', 'v', }, },
 
   ['<leader>sl'] = { '<cmd>Telescope live_grep<cr>', 'live_grep', mode = { 'n', 'v', }, },
   ['<leader>s<leader>l'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'live_grep') end, 'live_grep_sel', mode = { 'n', 'v', }, },
