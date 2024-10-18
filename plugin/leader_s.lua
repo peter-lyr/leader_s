@@ -15,7 +15,7 @@ require 'which-key'.register {
   ['<leader>sh'] = { '<cmd>Telescope help_tags<cr>', 'help_tags', mode = { 'n', 'v', }, },
   ['<leader>sa'] = { '<cmd>Telescope builtin<cr>', 'builtin', mode = { 'n', 'v', }, },
 
-  ['<leader>sw'] = { function() F.cmd('Telescope file_browser cwd="%s"', F.get_parent()) end, 'file_browser cur', mode = { 'n', 'v', }, },
+  ['<leader>sw'] = { function() F.cmd('Telescope file_browser cwd=%s', F.escape_space(F.get_parent())) end, 'file_browser cur', mode = { 'n', 'v', }, },
   ['<leader>s<leader>w'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'file_browser') end, 'file_browser sel', mode = { 'n', 'v', }, },
 
   ['<leader>s<leader><leader>'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'fd') end, 'fd_sel', mode = { 'n', 'v', }, },
@@ -37,7 +37,7 @@ require 'which-key'.register {
   ['<leader>sgh'] = { '<cmd>Telescope git_branches<cr>', 'git_branches', mode = { 'n', 'v', }, },
   ['<leader>sg<leader>h'] = { function() F.telescope_sel(F.get_cur_proj_dirs(), 'git_branches') end, 'git_branches_sel', mode = { 'n', 'v', }, },
 
-  ['<leader>sb'] = { function() F.cmd('Telescope buffers cwd="%s"', F.get_cwd()) end, 'buffers cwd', mode = { 'n', 'v', }, },
+  ['<leader>sb'] = { function() F.cmd('Telescope buffers cwd=%s', F.get_cwd()) end, 'buffers cwd', mode = { 'n', 'v', }, },
   ['<leader>s<leader>b'] = { '<cmd>Telescope buffers<cr>', 'buffers all', mode = { 'n', 'v', }, },
   ['<leader>sp'] = { '<cmd>Telescope project<cr>', 'project', mode = { 'n', 'v', }, },
 }
