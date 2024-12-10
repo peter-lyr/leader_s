@@ -8,6 +8,9 @@ require 'which-key'.register {
   ['<leader>s'] = { name = 'telescope', },
   ['<leader>s<leader>'] = { name = 'telescope.more', },
 
+  ['<leader>s<leader>o'] = { function() F.telescope_sel(F.get_sub_dirs(Work), 'file_browser') end, 'file_browser sel Work', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>i'] = { function() F.telescope_sel(F.get_sub_dirs(Life), 'file_browser') end, 'file_browser sel Life', mode = { 'n', 'v', }, },
+
   ['<leader>sr'] = { function() F.source(StdConfig .. 'lua\\_telescope.lua') end, 'resource telescope', mode = { 'n', 'v', }, },
 
   ['<leader>sz'] = { '<cmd>Telescope current_buffer_fuzzy_find<cr>', 'current_buffer_fuzzy_find', mode = { 'n', 'v', }, },
@@ -18,7 +21,7 @@ require 'which-key'.register {
   ['<leader>sw'] = { function() F.cmd('Telescope file_browser cwd=%s', F.escape_space(F.get_parent())) end, 'file_browser cur', mode = { 'n', 'v', }, },
   ['<leader>s<leader>w'] = { function() F.telescope_sel(F.get_file_more_dirs(), 'file_browser') end, 'file_browser sel', mode = { 'n', 'v', }, },
 
-  ['<leader>s<leader><leader>'] = { function() F.telescope_sel(F.get_file_more_dirs(), 'fd') end, 'fd_sel', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>f'] = { function() F.telescope_sel(F.get_file_more_dirs(), 'fd') end, 'fd_sel', mode = { 'n', 'v', }, },
   ['<leader>sj'] = { function() F.opened_proj_sel() end, 'opened_proj_sel', mode = { 'n', 'v', }, },
 
   ['<leader>sl'] = { '<cmd>Telescope live_grep<cr>', 'live_grep', mode = { 'n', 'v', }, },
