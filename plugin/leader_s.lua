@@ -8,8 +8,8 @@ require 'which-key'.register {
   ['<leader>s'] = { name = 'telescope', },
   ['<leader>s<leader>'] = { name = 'telescope.more', },
 
-  ['<leader>s<leader>o'] = { function() F.telescope_sel(F.get_sub_dirs(Work), 'file_browser') end, 'file_browser sel Work', mode = { 'n', 'v', }, },
-  ['<leader>s<leader>i'] = { function() F.telescope_sel(F.get_sub_dirs(Life), 'file_browser') end, 'file_browser sel Life', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>o'] = { function() F.telescope_sel_sel(F.get_sub_dirs(Work), 'file_browser') end, 'file_browser sel Work', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>i'] = { function() F.telescope_sel_sel(F.get_sub_dirs(Life), 'file_browser') end, 'file_browser sel Life', mode = { 'n', 'v', }, },
 
   ['<leader>sr'] = { function() F.source(StdConfig .. 'lua\\_telescope.lua') end, 'resource telescope', mode = { 'n', 'v', }, },
 
