@@ -8,8 +8,8 @@ require 'which-key'.register {
   ['<leader>s'] = { name = 'telescope', },
   ['<leader>s<leader>'] = { name = 'telescope.more', },
 
-  ['<leader>s<leader>o'] = { function() F.telescope_sel_sel(F.get_sub_dirs(W), 'file_browser') end, 'file_browser sel Work', mode = { 'n', 'v', }, },
-  ['<leader>s<leader>i'] = { function() F.telescope_sel_sel(F.get_sub_dirs(L), 'file_browser') end, 'file_browser sel Life', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>o'] = { function() F.telescope_sel(F.get_sub_dirs(W), 'fd') end, 'fd sel W', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>i'] = { function() F.telescope_sel_sel(F.get_sub_dirs(L), 'fd') end, 'fd sel L', mode = { 'n', 'v', }, },
 
   ['<leader>s<leader>d'] = { function() F.telescope_sel(F.get_sh_get_folder_path 'desktop', 'fd') end, 'fd sel Desktop', mode = { 'n', 'v', }, },
 
