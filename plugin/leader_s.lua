@@ -9,7 +9,7 @@ require 'which-key'.register {
   ['<leader>s<leader>'] = { name = 'telescope.more', },
 
   ['<leader>s<leader>o'] = { function() F.telescope_sel(F.get_sub_dirs(W), 'fd') end, 'fd sel W', mode = { 'n', 'v', }, },
-  ['<leader>s<leader>i'] = { function() F.telescope_sel_sel(F.get_sub_dirs(L), 'fd') end, 'fd sel L', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>i'] = { function() F.telescope_sel(F.get_sub_dirs(L), 'fd') end, 'fd sel L', mode = { 'n', 'v', }, },
   ['<leader>s<leader>p'] = { function() F.telescope_sel_sel(F.get_sub_dirs(P), 'fd') end, 'fd sel P', mode = { 'n', 'v', }, },
 
   ['<leader>s<leader><leader>'] = { name = 'telescope.more', },
