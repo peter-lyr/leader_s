@@ -12,13 +12,15 @@ require 'which-key'.register {
   -- W L P
   ['<leader>s<leader>o'] = { function() F.telescope_sel(F.get_sub_dirs(W), 'fd') end, 'fd sel W', mode = { 'n', 'v', }, },
   ['<leader>s<leader>i'] = { function() F.telescope_sel(F.get_sub_dirs(L), 'fd') end, 'fd sel L', mode = { 'n', 'v', }, },
-  ['<leader>s<leader>p'] = { function() F.telescope_sel_sel(F.get_sub_dirs(P), 'fd') end, 'fd sel P', mode = { 'n', 'v', }, },
+  ['<leader>s<leader>p'] = { function() F.telescope_sel(F.get_sub_dirs(P), 'fd') end, 'fd sel P', mode = { 'n', 'v', }, },
   ['<leader>s<leader><leader>f'] = { name = 'telescope.more', },
   ['<leader>s<leader><leader>fo'] = { function() F.telescope('fd', W) end, 'fd in W', mode = { 'n', 'v', }, },
   ['<leader>s<leader><leader>fi'] = { function() F.telescope('fd', L) end, 'fd in L', mode = { 'n', 'v', }, },
+  ['<leader>s<leader><leader>fp'] = { function() F.telescope('fd', P) end, 'fd in P', mode = { 'n', 'v', }, },
   ['<leader>s<leader><leader>l'] = { name = 'telescope.more', },
   ['<leader>s<leader><leader>lo'] = { function() F.telescope('live_grep', W) end, 'live_grep in W', mode = { 'n', 'v', }, },
   ['<leader>s<leader><leader>li'] = { function() F.telescope('live_grep', L) end, 'live_grep in L', mode = { 'n', 'v', }, },
+  ['<leader>s<leader><leader>lp'] = { function() F.telescope('live_grep', P) end, 'live_grep in P', mode = { 'n', 'v', }, },
 
   ['<leader>s<leader>d'] = { function() F.telescope_sel(F.get_sh_get_folder_path 'desktop', 'fd') end, 'fd sel Desktop', mode = { 'n', 'v', }, },
 
