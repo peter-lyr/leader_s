@@ -1,7 +1,7 @@
 local F = require 'f'
 
 require 'which-key'.register {
-  -- ['<leader>se'] = { function() F.telescope_extras() end, 'builtin', mode = { 'n', 'v', }, },
+  ['<leader>se'] = { function() F.telescope_extras() end, 'builtin', mode = { 'n', 'v', }, },
 }
 
 require 'which-key'.register {
